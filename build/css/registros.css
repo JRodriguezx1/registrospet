@@ -1,0 +1,402 @@
+:root{   /*se define variables*/
+    --blanco:  #ffffff;
+    --blancoclaro: #e7e7e7;
+    /*--azuloscuro: rgb(6, 45, 66);   de despachomovil*/
+    --verde: #68B984;
+    --verdeoscuro: #3D5656;
+    --grisoscuro: #183838;
+    --amarillo: #FECE00;
+    --negro: rgb(20, 20, 20);
+    --fuente-principal: 'Sofia Pro', sans-serif;
+
+    --telefono: 480px;
+    --tablet: 768px;
+    --xl_tablet: 992px;
+    --desktop: 1024px;
+    --xl_desktop: 1200px;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuente-principal);
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    background-color: var(--negro);
+}
+a {
+    text-decoration: none;
+}
+
+
+.container{
+    overflow: hidden;
+    max-width: 144rem;
+    width: 95%;
+    margin: 0 auto;
+    /*display: flex;*/
+    display: grid;
+    /*gap: 0.2rem;*/
+    grid-template-columns: 100%;
+    /*transition: all .6s ease;*/
+}
+.container-js{
+}
+.container-js .petsanar{
+    max-height: 55rem;
+}
+@media (min-width: 820px ){
+    .container-js .petsanar{
+        max-height: none;
+    }
+    .container-js{
+        grid-template-columns: 55% 45%;
+    }
+}
+.container-js .petsanarjs .imgfondo{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -0%;
+    transform: scale(1);
+}
+
+.petsanar{
+    border-left: 20px solid var(--verde);
+    /*margin: 0;
+    padding: 0;
+    background: url(../img/IMAGE1-2.jpg);*/
+    /*background-repeat: no-repeat;  /*no repita la imagen*/
+    /*background-size: cover; /*la imagen abarca la pantalla*/
+    /*background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    transition: width .6s ease;*/
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: width, border-left 1s ease;
+}
+.petsanarjs{ /*cuando se da click en btn enter*/
+    border-left: 60px solid var(--verde);
+}
+/*.petsanar-reducido{  /* clase agregada con js cuando se da click en enter*/ 
+    /*width: 55%;*/
+    /*background: url(../img/IMAGE1.jpg);
+    background-size: 250%;
+    background-position: bottom;*/
+/*}*/
+.imgfondo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    top: 0;
+    left: -0%;
+}
+.petsanarjs .imgfondo{
+    width: 220%;
+    height: 134%;
+    object-fit: contain;
+    position: relative;
+    top: 0;
+    left: -80%;
+    transform: scale(1.3);
+    /*transition: all .6s ease;*/
+}
+@media (min-width: 480px ){
+    .petsanarjs .imgfondo{
+        width: 180%;
+        height: 137%;
+        left: -50%;
+    }
+}
+@media (min-width: 640px ){
+    .petsanarjs .imgfondo{
+        width: 150%;
+        height: 125%;
+        left: -25%;
+    }
+}
+@media (min-width: 768px ){
+    .petsanarjs .imgfondo{
+        width: 130%;
+        height: 120%;
+        left: -9%;
+    }
+}
+@media (min-width: 820px ){
+    .petsanarjs .imgfondo{
+        width: 120%;
+        height: 120%;
+        left: -5%;
+    }
+}
+@media (min-width: 992px ){
+    .petsanarjs .imgfondo{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0;
+    }
+}
+
+.escalarimg-js{ /* clase agregada cuando se da click en entrar */
+    /*width: 220%;
+    height: 134%;
+    object-fit: contain;
+    position: relative;
+    left: -80%;
+    transform: scale(1.3);
+    top: -10%;*/
+}
+.escalarimg2-js{ /* clase agregada cuando se da click en el btn empresas */
+    /*transform: scale(1.6);
+    top: -26%;*/
+}
+.contenedoracciones{
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 10%;
+    /*transform: translateX(-50%);*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all .6s ease;
+}
+.contenedoracciones-js{  /* clase agregada cuando se da click en entrar */
+    top: 18%;
+}
+.contenedorlogo{
+    padding: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenedorlogo::after{
+    content: '';
+    width: 10rem;
+    height: 4px;
+    background-color: var(--verde);
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+.logo{
+    width: 24rem;
+}
+.entertext{
+    border: 2px solid var(--blancoclaro);
+    color: var(--blanco);
+    padding: .5rem 2.5rem;
+    border-radius: .5rem;
+    font-weight: 250;
+    margin-left: 2rem;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+.contenedor-btns{
+    display: none;
+    gap: 1rem;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.contenedoracciones-js .contenedor-btns{
+    display: flex;
+    flex-direction: column;
+}
+.contenedoracciones-js .entertext{
+    opacity: 0;
+}
+.contenedoracciones-js .contenedor-btns{
+    opacity: 1;
+}
+@media (min-width: 768px ){
+    .contenedoracciones-js .contenedor-btns{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+
+.btn{
+    width: 14rem;
+    text-align: center;  
+}
+.imgbtn{
+    width: 5rem;
+    cursor: pointer;
+}
+
+.btn p{
+    margin: .5rem 0;
+    color: var(--blanco);
+    position: relative;
+    padding: 1rem 0;
+    font-weight: 250;
+}
+.btn p::before{
+    content: '';
+    width: 4rem;
+    height: 3px;
+    background-color: var(--verde);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circulo{
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(85%);
+    left: 15%;
+}
+
+.petsanarjs .circulo{
+    transform: translateY(65%);
+    transition: all 1s ease;
+}
+
+/*-------------------------estilos lado derecho de la pantalla------------------------*/
+.contenedorregistros{
+    display: none;
+    background-color: var(--verde);
+}
+.contenedorregistros-js{
+    display: flex; 
+    min-height: 70rem;
+}
+@media (min-width: 820px ){
+    .contenedorregistros-js{
+        min-height: auto;
+    }
+}
+
+.sidebar{
+    background-color: var(--verdeoscuro);
+    width: 8rem;
+}
+.bloquesusuarios{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.bloquesusuarios img:hover{
+    cursor: pointer;
+}
+.bloque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bloque1{
+    justify-content: space-between;
+    height: 30%;
+}
+.bloque2{
+    height: 25%;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+}
+.imgbtnbarra{
+    width: 3.5rem;
+}
+.textusuario{
+    white-space: nowrap;
+    color: var(--blanco);
+    transform: rotate(-90deg);
+    font-size: 2.1rem;
+    margin: 0;
+}
+.contenedorform{
+    flex: 1;
+    margin-top: 8rem;
+    position: relative;
+}
+.contenedorform p{
+    color: var(--blancoclaro);
+    font-size: 1.2rem;
+    font-weight: 250;
+}
+.parcirculos{
+    position: absolute;
+    width: 49rem;
+    bottom: 0%;
+    transform: translateY(60%);
+    
+    left: 0;
+}
+.contenido-form{
+    max-width: 40rem; 
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------------------estilos formulario ----------------------- */
+.seccionform{
+    display: none;
+}
+.mostrarseccion-js {  /*/se encarga de mostrar los formularios */
+    display: block!important;
+} 
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+.formulario-campo{
+    margin: .6rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.formulario-input{
+    padding: .8rem;
+    border: 1px solid var(--blancoclaro);
+    font-size: 1.4rem;
+    border-radius: .6rem;
+    color: var(--blanco);
+    background-color: var(--verde);
+    outline: none;
+}
+.formulario-input::placeholder{
+    color: var(--blancoclaro);
+}
+.formulario-input:focus{
+    outline: 1px solid var(--blanco);
+}
+.formulario-submit{
+    margin-top: 2rem;
+    background-color: var(--verdeoscuro);
+    padding: 1.3rem 4rem;
+    color: var(--blanco);
+    font-size: 1.4rem;
+    font-weight: 400;
+    border: none;
+    border-radius: .6rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    align-self: flex-start;
+}
+.formulario-submit:hover {
+    background-color: var(--grisoscuro);
+    cursor: pointer;
+}
+

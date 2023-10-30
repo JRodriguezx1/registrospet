@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petsanar</title>
+    <link href="https://fonts.cdnfonts.com/css/sofia-pro?styles=17636,17630,17632,17634,17638,17628,17626" rel="stylesheet">           
+    <link rel="preload" href="/build/css/registros.css" type="style">  
+    <link  href="/build/css/registros.css" rel="stylesheet">   
+</head>
+<body>
+    <div class="container">
+        
+            <div class="petsanar">
+                <img class="imgfondo" src="/build/img/BANNER1.jpg" alt="">
+                <div class="contenedoracciones">
+                    <div class="contenedorlogo">
+                        <img class="logo" src="/build/img/logo1.png" alt="">
+                    </div>
+                    <div class="enter">
+                        <p class="entertext">Entrar</p>
+                    </div>
+                    <div class="contenedor-btns">
+                        <div class="btn">
+                            <img data-id="empresas" class="imgbtn" src="/build/img/edificio-de-oficinas.png" alt="">
+                            <p>Empresas</p>
+                        </div>
+                        <div class="btn">
+                            <img data-id="profesionales" class="imgbtn" src="/build/img/ley-1.png" alt="">
+                            <p>Veterinarios y otros profesionales</p>
+                        </div>
+                        <div class="btn">
+                            <img data-id="ciudadanos" class="imgbtn" src="/build/img/grupo-1.png" alt="">
+                            <p>Ciudadanos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <svg class="circulo" width="350" height="350">
+                    <circle cx="175" cy="175" r="175" fill="#68B984" />
+                </svg>
+            </div>
+            
+            <div class="contenedorregistros">
+                
+                <aside class="sidebar">
+                    <div class="bloquesusuarios">
+                        <div class="bloque bloque1">
+                            <img id="empresas" class="imgbtnbarra" src="/build/img/edificio-de-oficinas.png" alt="">
+                            <p class="textusuario">Veterinarios y otros profesionales</p>
+                        </div>
+                        <div class="bloque bloque2">
+                            <img id="ciudadanos" class="imgbtnbarra" src="/build/img/grupo-1.png" alt="">
+                            <img id="profesionales" class="imgbtnbarra" src="/build/img/ley-1.png" alt="">
+                        </div>
+                    </div>
+                </aside>
+                <div class="contenedorform">
+                    <div class="contenido-form">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui alias pariatur error quod, ipsam sapiente a vel quam tempora excepturi ipsum sed laboriosam optio esse deserunt rerum quia architecto debitis?</p>
+                        <!-- FORMULARIO EMPRESAS -->
+                        <div class="seccionform">
+                            <form class="formulario" action="/empresas" method="POST">
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="number" placeholder="NIT:" id="nit" name="nit">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Nombre de la empresa:" id="nombreempresa" name="nombreempresa">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Especialidad o especialidades" id="especialidades" name="especialidades">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Tiempo de ejercicio" id="tiempoejercicio" name="tiempoejercicio">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="email" placeholder="Correo electronico" id="email" name="email">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Localidad o municipio" id="localidad" name="localidad">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Ciudad" id="ciudad" name="ciudad">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Pais" id="pais" name="pais">
+                                </div>
+                                    <input class="formulario-submit" type="submit" value="Registrarme">
+                            </form>
+                        </div>
+                        <!-- FORMULARIO VETERINARIOS Y PROFESIONALES -->
+                        <div class="seccionform">
+                            <form class="formulario" action="/veterinariosyprofesionales" method="POST">
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Nombre:" id="nombre" name="nombre">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="number" placeholder="Tarjeta profesional" id="tprofesional" name="tprofesional">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Especialidad" id="especialidad" name="especialidad">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Tiempo de ejercicio" id="tiempoejercicio" name="tiempoejercicio">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="email" placeholder="Correo electronico" id="email" name="email">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Localidad o municipio" id="localidad" name="localidad">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Ciudad" id="ciudad" name="ciudad">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Pais" id="pais" name="pais">
+                                </div>
+                                    <input class="formulario-submit" type="submit" value="Registrarme">
+                            </form>
+                        </div>
+                        <!-- FORMULARIO CIUDADANOS -->
+                        <div class="seccionform">
+                            <form class="formulario" action="/ciudadanos" method="POST">
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Nombre:" id="nombre" name="nombre">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="email" placeholder="Correo electronico" id="email" name="email">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Localidad o municipio" id="localidad" name="localidad">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Ciudad" id="ciudad" name="ciudad">
+                                </div>
+                                <div class="formulario-campo">
+                                    <input class="formulario-input" type="text" placeholder="Pais" id="pais" name="pais">
+                                </div>
+                                    <input class="formulario-submit" type="submit" value="Registrarme">
+                            </form>
+                        </div>
+                    </div>
+                    <img class="parcirculos" src="/build/img/Group 11.png" alt="">
+                </div>
+                
+                
+            </div>
+        
+    </div>
+</body>
+    <script src="/build/js/registros.js"></script>
+</html>
